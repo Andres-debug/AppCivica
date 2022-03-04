@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import  {Tarjeta} from './src/components/Card';
+import  {Tarjeta} from './src/components/Card/Card';
 import { Home } from './src/views/Home';
 
 
@@ -8,7 +8,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Home/>
-      <Tarjeta/>
       <StatusBar style="auto" />
     </View>
     

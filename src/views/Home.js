@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import {VidaMetro} from '../views/VidaMetro'
 
 export const Home = () =>{
     return(
+     
+        <VidaMetro/>
         
-        <Text></Text>
-    
-    );
-};
+)
+}
