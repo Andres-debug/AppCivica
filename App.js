@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import  {Tarjeta} from './src/components/Card/Card';
+import {IconButton } from 'react-native-paper'
+import { StyleSheet, Text, View, Image } from 'react-native';
+import AppBar from './src/components/AppBar/AppBar';
 import { Home } from './src/views/Home';
 
 
@@ -8,7 +9,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Home/>
+      <AppBar/>
+      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+      <Image
+        style={styles.builds}
+        source={require('./src/assets/images/builds.png')}
+      />
     </View>
     
   );
@@ -21,4 +28,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  builds:{
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: -100,
+  }
 });
