@@ -20,20 +20,13 @@
     "react-native-paper": "^4.11.2",
     "react-native-web": "0.17.1"
   },
-    
-    "rnpm":{
-      "assets":[
-        "../src/assets/fonts/Frutiger_bold.ttf"
-      ]
-
-    },
-
-
-    "devDependencies": {
+  "rnpm": {
+    "assets": [
+      "../src/assets/fonts/Frutiger_bold.ttf"
+    ]
+  },
+  "devDependencies": {
     "@babel/core": "^7.12.9"
   },
   "private": true
-
-
 }
-
