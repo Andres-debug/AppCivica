@@ -10,6 +10,18 @@ const Bottom = () => (
       size={40}
       onPress={() => console.log("Pressed")}
     />
+    <IconButton style={icon.qr}
+      icon='qrcode'
+      color="#5fa630"
+      size={60}
+      onPress={() => console.log("Pressed")}
+    />
+     <IconButton style={icon.pin}
+      icon='flag'
+      color="#5fa630"
+      size={40}
+      onPress={() => console.log("Pressed")}
+    />
   </Appbar>
 );
 
@@ -20,6 +32,16 @@ const icon = StyleSheet.create({
     left:0,
     backgroundColor:"#fff"
   },
+  qr:{
+    left:72,
+    backgroundColor:"#fff"
+
+  },
+  pin:{
+    left:135,
+    backgroundColor:"#fff"
+  }
+  
 });
 
 const styles = StyleSheet.create({
