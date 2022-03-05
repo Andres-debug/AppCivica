@@ -41,6 +41,7 @@ source={require('../images/estilo.png')}/>
 const styles = StyleSheet.create({
     container:{
         flexDirection: 'row',
+        top:50
     },
     targetaConsulta: {
       borderRadius: 15,
@@ -51,15 +52,14 @@ const styles = StyleSheet.create({
       shadowRadius: 2,
       elevation: 5,
       width: "35%",
-      height: "70%",
-      padding: 20,
+      height: 170,
       marginHorizontal: 5,
       marginVertical: 22,
     },
     texto: {
       fontSize: 20,
       fontWeight: "bold",
-      color: '#9F9F9F9F'
+      color: 'gray'
     },
     touchable: {
       justifyContent: "center",
