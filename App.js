@@ -29,6 +29,11 @@ export default function App() {
       
       />
       <Home />
+      <Image
+        style={styles.bbd}
+        source={require("./src/assets/images/bbd.png")}
+      
+      />
       <Bottom />
       <StatusBar style="auto" />
     </View>
@@ -52,6 +57,7 @@ const styles = StyleSheet.create({
   user:{
     width:130,
     height:130,
+
   },
   world:{
     position:'absolute',
@@ -66,5 +72,13 @@ const styles = StyleSheet.create({
     height:70,
     top:280,
     left:25
+  },
+  bbd:{
+    position:'absolute',
+    width:300,
+    height:100,
+    top:650,
+    left:60
   }
+  
 });
