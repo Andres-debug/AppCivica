@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Animated, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import {useState} from 'react';
 
 
 export const Card1 = () =>{
 
-  const [shouldShow, setShouldShow] = useState(true);
+  const [shouldShow, setShouldShow] = useState(false);
 
     return(
     <View style={styles.tarjeta2}>

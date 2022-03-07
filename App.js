@@ -6,6 +6,7 @@ import {
   Image,
   SafeAreaView,
   ScrollView,
+  TouchableOpacity
 } from "react-native";
 import AppBar from "./src/components/AppBar/AppBar";
 import { Home } from "./src/views/Home";
@@ -29,5 +30,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#f2f2f2",
     alignItems: "center",
     justifyContent: "center",
-  }
+  }, 
+  
 });

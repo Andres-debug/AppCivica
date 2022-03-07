@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export const Card3 = () => {
-  const [shouldShow, setShouldShow] = useState(true);
+  const [shouldShow, setShouldShow] = useState(false);
   return (
       <View style={styles.tarjeta3}>
         <TouchableOpacity style={styles.touchable} onPress={() => setShouldShow(!shouldShow)}>
