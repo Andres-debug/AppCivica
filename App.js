@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
 import AppBar from "./src/components/AppBar/AppBar";
 import { Home } from "./src/views/Home";
 import Bottom from "./src/components/Bottom/Bottom";
@@ -7,34 +14,38 @@ import Bottom from "./src/components/Bottom/Bottom";
 export default function App() {
   return (
     <View style={styles.container}>
-      <AppBar />
       <StatusBar style="auto" />
-      <Image
-        style={styles.builds}
-        source={require("./src/assets/images/builds.png")}
-      />
-      <Image
-        style={styles.user}
-        source={require("./src/assets/images/user.png")}
-      
-      />
-       <Image
-        style={styles.people}
-        source={require("./src/assets/images/world.png")}
-      
-      />
-         <Image
-        style={styles.world}
-        source={require("./src/assets/images/people.png")}
-      
-      />
-      <Home />
-      <Image
-        style={styles.bbd}
-        source={require("./src/assets/images/bbd.png")}
-      
-      />
-      <Bottom />
+      <AppBar />
+      <SafeAreaView style={styles.safe}>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.container2}>
+            <Image
+              style={styles.builds}
+              source={require("./src/assets/images/builds.png")}
+            />
+            <Image
+              style={styles.user}
+              source={require("./src/assets/images/user.png")}
+            />
+            <Image
+              style={styles.people}
+              source={require("./src/assets/images/world.png")}
+            />
+            <Image
+              style={styles.world}
+              source={require("./src/assets/images/people.png")}
+            />
+            <Text style={styles.text1}>Tu</Text>
+            <Text style={styles.text1}>Mundo</Text>
+            <Text style={styles.text2}>Tu</Text>
+            <Text style={styles.text2}>Comunidad</Text>
+            <Text style={styles.text3}>Andrés Felipe Díaz Monsalve</Text>
+            <Text style={styles.text4}>Estudiante Ingeniera de Sistemas</Text>
+            <Home />
+          </View>
+        </ScrollView>
+        <Bottom />
+      </SafeAreaView>
       <StatusBar style="auto" />
     </View>
   );
@@ -43,42 +54,79 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f2f2f2",
     alignItems: "center",
     justifyContent: "center",
   },
   builds: {
+    top: -150,
+  },
+  user: {
     position: "absolute",
+    width: 130,
+    height: 130,
+    top: 190,
+    left: 135,
+  },
+  world: {
+    position: "absolute",
+    width: 70,
+    height: 70,
+    top: 220,
+    left: 300,
+  },
+  people: {
+    position: "absolute",
+    width: 70,
+    height: 70,
+    top: 220,
+    left: 25,
+  },
+  bbd: {
+    position: "absolute",
+    width: 320,
+    height: 120,
+    top: 650,
+    left: 37,
+  },
+  scrollView: {
+    position: "relative",
+  },
+  safe: {
+    width: "100%",
+    height: "100%",
+    marginTop: "16%",
+  },
+  container2: {
+    height: 1000,
+  },
+  text1: {
+    top: -125,
+    left: -139,
+    color: "#3F6E21",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  text2: {
+    top: -163,
+    left: 139,
+    color: "#3F6E21",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  text3: {
+    top: -145,
     left: 0,
-    right: 0,
-    bottom: 0,
-    top: -100,
+    color: "#3F6E21",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize:25
   },
-  user:{
-    width:130,
-    height:130,
-
+  text4: {
+    top: -145,
+    left: 0,
+    color: "#B5C1AE",
+    textAlign: "center",
+    fontWeight: "bold",
   },
-  world:{
-    position:'absolute',
-    width:70,
-    height:70,
-    top:280,
-    left:300
-  },
-  people:{
-    position:'absolute',
-    width:70,
-    height:70,
-    top:280,
-    left:25
-  },
-  bbd:{
-    position:'absolute',
-    width:300,
-    height:100,
-    top:650,
-    left:60
-  }
-  
 });
