@@ -7,8 +7,12 @@ import { Card3 } from "../components/Cards/Card3";
 export const VidaMetro = () => {
   return (
     <View style={styles.container}>
+      <View>
       <Card1 />
+      </View>
+      <View>
       <Card2 />
+      </View>
       <Card3 />
     </View>
   );

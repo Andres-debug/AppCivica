@@ -1,20 +1,36 @@
 import * as React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
-
+import { useState } from "react";
 
 export const Card2 = () => {
+  const [shouldShow, setShouldShow] = useState(true);
+
   return (
-    
-      <View style={styles.targetaConsulta}>
-        <TouchableOpacity style={styles.touchable} onPress={() => {}}>
-          <Image
-            style={styles.tinyLogo}
-            source={require("../../images/educacion.png")}
-          />
-          <Text style={styles.texto}>Tu</Text>
-          <Text style={styles.texto}>Educacion</Text>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.targetaConsulta}>
+      <TouchableOpacity
+        style={styles.touchable}
+        onPress={() => setShouldShow(!shouldShow)}
+      >
+        <Image
+          style={styles.tinyLogo}
+          source={require("../../images/educacion.png")}
+        />
+        <Text style={styles.texto}>Tu</Text>
+        <Text style={styles.texto}>Educacion</Text>
+      </TouchableOpacity>
+      {shouldShow ? (
+        <Image
+          style={styles.img1}
+          source={require("../../assets/images/big.png")}
+        />
+      ) : null}
+      {shouldShow ? (
+        <Image
+          style={styles.img2}
+          source={require("../../assets/images/ingles.png")}
+        />
+      ) : null}
+    </View>
   );
 };
 
@@ -48,5 +64,17 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 15,
     marginTop: 10,
+  },
+  img1: {
+    top: 55,
+    left: -120,
+    width: 350,
+    height: 100,
+  },
+  img2: {
+    top: 85,
+    left: -120,
+    width: 350,
+    height: 100,
   },
 });
