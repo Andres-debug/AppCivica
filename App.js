@@ -17,6 +17,8 @@ import Bottom from "./src/components/Bottom/Bottom";
 import { Community } from "./src/views/Community";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { navigationRef, isReadyRef  } from "./RootNavigation";
+import { Button } from 'react-native-paper';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -36,8 +38,8 @@ export default function App() {
           isReadyRef.current = true;
         }}
       >
-      <Home/>
-        <Stack.Navigator initialRouteName="Home">
+        <Home />
+        <Stack.Navigator initialRouteName="Community">
           <Stack.Screen name="Community" component={Community} />
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>

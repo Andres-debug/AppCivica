@@ -42,7 +42,6 @@ export const Home = () => {
             <Image
               style={styles.people}
               source={require("../assets/images/people.png")}
-              onPress={() => console.log("Pressed")}
             />
           </TouchableOpacity>
         
