@@ -1,11 +1,13 @@
 import * as React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { useState } from "react";
+
 
 export const Card3 = () => {
+  const [shouldShow, setShouldShow] = useState(true);
   return (
-      
       <View style={styles.tarjeta3}>
-        <TouchableOpacity style={styles.touchable} onPress={() => {}}>
+        <TouchableOpacity style={styles.touchable} onPress={() => setShouldShow(!shouldShow)}>
           <Image
             style={styles.tinyLogo}
             source={require("../../images/estilo.png")}
@@ -13,6 +15,19 @@ export const Card3 = () => {
           <Text style={styles.texto2}>Tu</Text>
           <Text style={styles.texto2}>Estilo</Text>
         </TouchableOpacity>
+        {shouldShow ? (
+        <Image
+          style={styles.img1}
+          source={require("../../assets/images/cambio.png")}
+        />
+      ) : null}
+        {shouldShow ? (
+        <Image
+          style={styles.img2}
+          source={require("../../assets/images/historia.png")}
+        />
+      ) : null}
+      
       </View>
   );
 };
@@ -48,5 +63,17 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 15,
     marginTop: 10,
+  },
+  img1: {
+    top: 50,
+    left: -240,
+    width: 350,
+    height: 100,
+  },
+  img2: {
+    top: 80,
+    left: -240,
+    width: 350,
+    height: 100,
   },
 });

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { Animated, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import {useState} from 'react';
 
 
@@ -20,7 +20,14 @@ export const Card1 = () =>{
     {shouldShow ? (
           <Image  
           style={styles.img1}
-          source={require("../../assets/images/bbd.png")}/>
+          source={require("../../assets/images/cupones.png")}/>
+          
+        ) : null}
+           {shouldShow ? (
+          <Image  
+          style={styles.img2}
+          source={require("../../assets/images/boletos.png")}/>
+          
         ) : null}
   </View>
 )
@@ -61,6 +68,13 @@ const styles = StyleSheet.create({
       },
       img1:{
         top:50,
+        left:-10,
+        width:350,
+        height:100
+       
+      },
+      img2:{
+        top:80,
         left:-10,
         width:350,
         height:100
