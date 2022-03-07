@@ -8,12 +8,16 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { VidaMetro } from "../views/VidaMetro";
+import { useNavigation } from '@react-navigation/native';
+import { Button } from "react-native-paper";
 
 export const Home = () => {
+  const navigation = useNavigation(); 
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.container2}>
+        
           <Image
             style={styles.builds}
             source={require("../assets/images/builds.png")}
@@ -22,6 +26,7 @@ export const Home = () => {
             style={styles.user}
             source={require("../assets/images/user.png")}
           />
+         
           <Image
             style={styles.world}
             source={require("../assets/images/world.png")}
@@ -33,13 +38,14 @@ export const Home = () => {
           <Text style={styles.text3}>Andrés Felipe Díaz Monsalve</Text>
           <Text style={styles.text4}>Estudiante Ingeniera de Sistemas</Text>
           <VidaMetro />
-          <TouchableOpacity style={styles.peoplecard} onPress = {() => console.log("precionado")}>
+          <TouchableOpacity style={styles.peoplecard} onPress = {() => navigation.navigate('Community')}>
             <Image
               style={styles.people}
               source={require("../assets/images/people.png")}
               onPress={() => console.log("Pressed")}
             />
           </TouchableOpacity>
+        
         </View>
       </ScrollView>
     </SafeAreaView>

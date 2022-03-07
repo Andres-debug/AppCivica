@@ -1,15 +1,18 @@
 import * as React from "react";
 import { Appbar, IconButton, Colors } from "react-native-paper";
 import { Text, StyleSheet } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
-const Bottom = () => (
+const Bottom = () => {
+const navigation = useNavigation(); 
+return(
   <Appbar style={styles.bottom}>
     <IconButton
       style={icon.icon}
       icon="home"
       color="#3F6E21"
       size={40}
-      onPress={() => console.log("Pressed")}
+      onPress={() => navigation.navigate("Home")}
     />
     <Text style={icon.text1}>Inicio</Text>
     <IconButton
@@ -28,7 +31,7 @@ const Bottom = () => (
     />
     <Text style={icon.text2}>Explorar</Text>
   </Appbar>
-);
+);}
 
 export default Bottom;
 
